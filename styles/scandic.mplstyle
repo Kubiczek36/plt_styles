@@ -61,3 +61,9 @@ grid.linewidth: 0.5
 
 
 lines.markersize:  4
+
+### images
+image.cmap: plasma
+
+### pcolormesh
+pcolor.cmap: plasma

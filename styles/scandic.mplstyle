@@ -1,0 +1,63 @@
+#Author: Jakub Dokulil
+
+### FIGURE
+figure.facecolor: white
+figure.dpi: 250
+figure.titlesize: 14
+figure.titleweight: bold
+
+### lines
+lines.linewidth : 1.0
+
+### Patches
+patch.facecolor: 007AFF
+patch.antialiased: True
+
+### LEGEND
+legend.fontsize: 8
+legend.fancybox: False
+legend.edgecolor: w
+
+### Errorbar plots
+errorbar.capsize: 2  # length of end cap on error bars in pixels
+
+### TICKS
+xtick.direction: out
+ytick.direction: out
+xtick.major.size:    3.5     # major tick size in points
+xtick.minor.size:    2       # minor tick size in points
+ytick.major.size:    3.5     # major tick size in points
+ytick.minor.size:    2       # minor tick size in points
+
+### FONTS
+font.family: sans-serif
+font.sans-serif: Avenir, 'Avenir Next LT Pro', Arial, Helvetica, sans-serif
+font.size: 8
+
+text.hinting_factor : 8
+
+mathtext.fontset : cm
+
+### AXES
+axes.grid: True
+axes.grid.which: major
+axes.facecolor: white
+axes.linewidth: 1.0
+axes.titlesize: 10
+axes.titleweight: bold
+axes.labelsize: 10
+axes.spines.top: False
+axes.spines.right: False
+axes.prop_cycle: cycler('color', ['007355', 'D20000', '03468F', 'F59A23', '82218B', '007AFF', '7EC636', 'F65353'])
+
+
+### axes
+xaxis.labellocation: right
+yaxis.labellocation: top
+
+grid.color: b2b2b2
+grid.linestyle: -
+grid.linewidth: 0.5
+
+
+lines.markersize:  4

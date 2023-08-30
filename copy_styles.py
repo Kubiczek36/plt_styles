@@ -4,10 +4,9 @@
 import os
 import shutil
 
-
-print(80*"=")
+print(80 * "=")
 print("Script to copy created matplotlib styles to matplotlib stylelib folder")
-print(80*"=")
+print(80 * "=")
 
 # get current working directory
 cwd = os.getcwd()
@@ -21,7 +20,7 @@ my_styles = os.listdir(my_styles_path)
 print("\nStyles in the folder: ")
 
 for i in range(len(my_styles)):
-    print("{}. {}".format(i+1, my_styles[i]))
+    print("{}. {}".format(i + 1, my_styles[i]))
 
 # get path to matplotlib stylelib folder
 # ------------------------------------------
@@ -48,11 +47,11 @@ envs = [env for env in envs if not env.startswith('.')]
 print("\nList of environments: ")
 
 for i in range(len(envs)):
-    print("{}. {}".format(i+1, envs[i]))
+    print("{}. {}".format(i + 1, envs[i]))
 
-env_styles_paths =  [ ]
+env_styles_paths = []
 # empty list of booleans size of envs
-matplotli_in_env = [ ]
+matplotli_in_env = []
 
 for env in envs:
     matplotli_in_env.append(False)
@@ -65,9 +64,14 @@ if os.name == 'posix':
         for folder in os.listdir(lib_path):
             if folder.startswith('python3'):
                 # test if matplotlib folder exists
-                if 'matplotlib' in os.listdir(os.path.join(lib_path, folder, 'site-packages')):
-                    env_styles_paths.append(os.path.join(lib_path, folder, 'site-packages', 'matplotlib'))
+                if 'matplotlib' in os.listdir(
+                        os.path.join(lib_path, folder, 'site-packages')):
+                    env_styles_paths.append(
+                        os.path.join(lib_path, folder, 'site-packages',
+                                     'matplotlib', 'mpl-data', 'stylelib'))
                     matplotli_in_env[envs.index(env)] = True
+                # else:
+                #     env_styles_paths.append('')
 
 # windows path
 elif os.name == 'nt':
@@ -77,25 +81,30 @@ elif os.name == 'nt':
         for folder in os.listdir(lib_path):
             if folder.startswith('python3'):
                 # test if matplotlib folder exists
-                if 'matplotlib' in os.listdir(os.path.join(lib_path, folder, 'site-packages')):
-                    env_styles_paths.append(os.path.join(lib_path, folder, 'site-packages', 'matplotlib'))
+                if 'matplotlib' in os.listdir(
+                        os.path.join(lib_path, folder, 'site-packages')):
+                    env_styles_paths.append(
+                        os.path.join(lib_path, folder, 'site-packages',
+                                     'matplotlib', 'mpl-data', 'stylelib'))
                     matplotli_in_env[envs.index(env)] = True
 
 print("\nMatplotlib found in environments: ")
 
 for i in range(len(matplotli_in_env)):
-    print("{}. {} \t {}".format(i+1, envs[i], matplotli_in_env[i]))
-
+    print("{}. \t {} \t {}".format(i + 1, envs[i], matplotli_in_env[i]))
 
 # copy my styles to matplotlib stylelib folder
 # --------------------------------------------
 print("\nCopying styles to matplotlib stylelib folder: ")
 
-print("\n env_styles_paths: ", len(env_styles_paths))
+print("\nenv_styles_paths length: ", len(env_styles_paths))
 
-for i in range(len(matplotli_in_env)):
-    if matplotli_in_env[i]:
-        print("\nEnvironment: {}".format(envs[i]))
-        for style in my_styles:
-            shutil.copy(os.path.join(my_styles_path, style), os.path.join(env_styles_paths[i], 'mpl-data', 'stylelib'))
-            print("Copied {}".format(style))
+for i in range(len(env_styles_paths)):
+    print(i)
+    # print("\nEnvironment: {}".format(envs[i]))
+    print("Path: {}".format(env_styles_paths[i]))
+    for style in my_styles:
+        shutil.copy(
+            os.path.join(my_styles_path, style),
+            env_styles_paths[i])
+        print("Copied {}".format(style))

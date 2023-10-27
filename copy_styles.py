@@ -4,6 +4,23 @@
 import os
 import shutil
 
+logo = r"""
+|           ____  _       _
+|          |  _ \| | ___ | |_
+|          | |_) | |/ _ \| __|
+|     *    |  __/| | (_) | |_
+|   *   *  |_|  _|_|\___/ \__|
+|  *     *               ___| |_ _   _| | ___  ___
+| *       *          *  / __| __| | | | |/ _ \/ __|
+⏊______________________ \__ \ |_| |_| | |  __/\__ \
+            *       * * |___/\__|\__, |_|\___||___/
+              *   *
+                *
+
+"""
+
+print(logo)
+
 print(80 * "=")
 print("Script to copy created matplotlib styles to matplotlib stylelib folder")
 print(80 * "=")

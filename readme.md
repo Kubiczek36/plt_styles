@@ -23,3 +23,6 @@ So far tested on Mac, however should work on Linux and Windows as well.
 > ```
 > Note that styles further to the right will overwrite values that are already defined by styles on the left.
 
+- use `matplotlib.get_configdir()`
+  - will be problematic for all the conda environments
+  - maybe allways update with the latest styles saved in well known place

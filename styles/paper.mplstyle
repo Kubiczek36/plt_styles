@@ -1,0 +1,43 @@
+#Author: Jakub Dokulil
+
+### FIGURE
+figure.dpi: 250
+figure.titlesize: 16
+figure.titleweight: bold
+
+
+### LEGEND
+legend.fontsize: 10
+
+### Errorbar plots
+errorbar.capsize: 2  # length of end cap on error bars in pixels
+
+### FONTS
+font.family: sans-serif
+font.sans-serif: Avenir, 'Avenir Next LT Pro', Arial, Helvetica, sans-serif
+font.size: 8
+
+text.hinting_factor : 8
+
+mathtext.fontset : cm
+
+### AXES
+axes.linewidth: 1.0
+axes.titlesize: 10
+axes.titleweight: bold
+axes.labelsize: 10
+
+### axes
+xaxis.labellocation: right
+yaxis.labellocation: top
+
+grid.linewidth: 0.5
+
+
+lines.markersize:  4
+
+### images
+image.cmap: plasma
+
+### pcolormesh
+pcolormesh.cmap: plasma

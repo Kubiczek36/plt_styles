@@ -5,6 +5,7 @@ figure.facecolor: white
 figure.dpi: 250
 figure.titlesize: 14
 figure.titleweight: bold
+figure.figsize: 3.5, 2.333
 
 ### lines
 lines.linewidth : 1.0
@@ -24,9 +25,9 @@ errorbar.capsize: 2  # length of end cap on error bars in pixels
 ### TICKS
 xtick.direction: out
 ytick.direction: out
-xtick.major.size:    3.5     # major tick size in points
+xtick.major.size:    3     # major tick size in points
 xtick.minor.size:    2       # minor tick size in points
-ytick.major.size:    3.5     # major tick size in points
+ytick.major.size:    3     # major tick size in points
 ytick.minor.size:    2       # minor tick size in points
 
 ### FONTS
@@ -43,9 +44,9 @@ axes.grid: True
 axes.grid.which: major
 axes.facecolor: white
 axes.linewidth: 1.0
-axes.titlesize: 10
+axes.titlesize: 9
 axes.titleweight: bold
-axes.labelsize: 10
+axes.labelsize: 9
 axes.spines.top: False
 axes.spines.right: False
 axes.prop_cycle: cycler('color', ['007355', 'D20000', '03468F', 'F59A23', '82218B', '007AFF', '7EC636', 'F65353'])
@@ -66,4 +67,4 @@ lines.markersize:  4
 image.cmap: plasma
 
 ### pcolormesh
-pcolor.cmap: plasma
+# pcolormesh.cmap: plasma

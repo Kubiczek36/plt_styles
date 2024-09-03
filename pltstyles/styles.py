@@ -23,3 +23,16 @@ class Styles:
         else:
             print(
                 f"Style '{style}' not found. Available styles: {', '.join(available_styles)}")
+
+    def apply_combined_style(self, styles):
+        stls = []
+        for style in styles:
+            if not style.endswith('.mplstyle'):
+                style_name = style + '.mplstyle'
+            available_styles = self.get_styles()
+            if style_name not in available_styles:
+                print(
+                    f"Style '{style}' not found. Available styles: {', '.join(available_styles)}")
+                return
+            stls.append(os.path.join(self.styles_path, style_name))
+        self.plt_obj.style.use(stls)

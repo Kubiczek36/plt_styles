@@ -18,6 +18,36 @@ plt.plot(x, y)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Example Plot')
+# Show the plot
+plt.show()
 
+# Set the style to 'scandic' and 'pres'
+
+styles.apply_combined_style(['scandic', 'pres'])
+
+plt.figure()
+# Plot the data
+plt.plot(x, y)
+
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Example Plot')
+# Show the plot
+plt.show()
+
+# Set the style to 'scandic' and 'paper'
+
+styles.apply_combined_style(['scandic', 'paper'])
+
+
+plt.figure()
+# Plot the data
+plt.plot(x, y)
+
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Example Plot')
 # Show the plot
 plt.show()

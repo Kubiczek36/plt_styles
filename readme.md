@@ -15,17 +15,21 @@
 # Script for copying the matplotlib styles to all conda environments
 
 ## Usage
-1. create a style you desire in the `styles` folder. Check the [matplotlib page](https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file) for attributes you can change.
-2. check the style with [plots_demo.ipynb](plots_demo.ipynb)
-3. run [copy_styles.py](copy_styles.py) to copy all the styles to all conda environments
+1. Install ideally in the editable mode
+    ```bash
+    pip install -e .
+    ```
+2. create a style you desire in the `styles` folder. Check the [matplotlib page](https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file) for attributes you can change.
+3. Check the example file [example.mplstyle](styles/example.mplstyle) for the example of usage.
+
 
 **Note:** the script will overwrite the styles in the conda environments
 
 So far tested on Mac, however should work on Linux and Windows as well.
 
 ## Further improvements
-- include [temp styling](https://matplotlib.org/stable/tutorials/introductory/customizing.html#temporary-styling) for example for phase plots
-- make use od [composing styles](https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets)
+- [ ] include [temp styling](https://matplotlib.org/stable/tutorials/introductory/customizing.html#temporary-styling) for example for phase plots
+- [x] make use od [composing styles](https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets)
 
 > ### Composing styles
 >
@@ -36,7 +40,3 @@ So far tested on Mac, however should work on Linux and Windows as well.
 > plt.style.use(['dark_background', 'presentation'])
 > ```
 > Note that styles further to the right will overwrite values that are already defined by styles on the left.
-
-- use `matplotlib.get_configdir()`
-  - will be problematic for all the conda environments
-  - maybe allways update with the latest styles saved in well known place
